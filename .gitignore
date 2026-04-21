@@ -1,0 +1,13 @@
+*.class
+*.bin
+
+# Java / IDE
+out/
+build/
+target/
+.idea/
+.vscode/
+
+# OS
+Thumbs.db
+Desktop.ini
