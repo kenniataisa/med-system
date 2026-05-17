@@ -27,15 +27,17 @@ public class Server {
     public static void main(String[] args) {
         System.out.println("=== SISTEMA MEDICO - SERVIDOR ===");
 
+        exibirMenu();
+
         Thread threadConexoes = new Thread(Server::aguardarConexoes, "thread-conexoes");
         threadConexoes.setDaemon(true);
         threadConexoes.start();
 
         String opcao;
         do {
-            exibirMenu();
             opcao = scanner.nextLine().trim();
             processarOpcao(opcao);
+            if (!opcao.equals("0")) exibirMenu();
         } while (!opcao.equals("0"));
 
         System.out.println("Encerrando servidor...");
@@ -93,7 +95,7 @@ private static void exibirMenu() {
     System.out.println("  __  __          _    _____           _                         ");
     System.out.println(" |  \\/  |        | |  / ____|         | |                       ");
     System.out.println(" | \\  / | ___  __| | | (___  _   _ ___| |_ ___ _ __ ___         ");
-    System.out.println(" | |\\/| |/ _ \\/ _` |  \\___ \\| | | / __| __/ _ \\ '_ ` _ \\   ");
+    System.out.println(" | |\\/| |/ _ \\/ _` |  \\___ \\| | | / __| __/ _ \\  _   _ \\   ");
     System.out.println(" | |  | |  __/ (_| |  ____) | |_| \\__ \\ ||  __/ | | | | |      ");
     System.out.println(" |_|  |_|\\___|\\__,_| |_____/ \\__, |___/\\__\\___|_| |_| |_|   ");
     System.out.println("                              __/ |                              ");
@@ -103,7 +105,7 @@ private static void exibirMenu() {
     System.out.println("1. Listar medicos recebidos");
     System.out.println("2. Enviar notificacao multicast");
     System.out.println("0. Encerrar servidor");
-    System.out.print("Opcao: ");
+    System.out.print("Opcao: \n");
 }
 
     private static void processarOpcao(String opcao) {

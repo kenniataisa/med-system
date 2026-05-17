@@ -53,7 +53,7 @@ public class Client {
         switch (opcao) {
             case "1": enviarMedicos();  break;
             case "2": listarLocais();   break;
-            case "0":                   break; // só sai do loop
+            case "0":                   break; 
             default:
                 System.out.println("Opcao invalida. Tente novamente.");
         }
