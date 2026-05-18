@@ -1,4 +1,4 @@
-# Sistema de Especialidades Médicas Distribuído
+# Sistema de Especialidades Médicas 
 
 Este repositório contém duas etapas do projeto da disciplina de Sistemas Distribuídos.
 
