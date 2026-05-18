@@ -11,3 +11,8 @@ target/
 # OS
 Thumbs.db
 Desktop.ini
+
+
+out/
+target/
+*.class
