@@ -2,15 +2,15 @@ package model;
 
 public class Especialidade {
 
-    private int    id;
+    private int id;
     private String nome;
     private String descricao;
 
     public Especialidade() {}
 
     public Especialidade(int id, String nome, String descricao) {
-        this.id        = id;
-        this.nome      = nome;
+        this.id = id;
+        this.nome = nome;
         this.descricao = descricao;
     }
 

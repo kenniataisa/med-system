@@ -12,9 +12,9 @@ import java.util.Scanner;
 
 public class Client {
 
-    private static final String HOST         = "localhost";
-    private static final int    PORTA_RMI    = 1099;
-    private static final String NOME_SERVICO = "ServicoMedico";
+    private static final String HOST = "localhost";
+    private static final int    PORTA_RMI = 1099;
+    private static final String NOME_SERVICO = "ServicoMedico"; 
 
     private static Proxy   proxy;
     private static Scanner scanner = new Scanner(System.in);

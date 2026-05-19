@@ -1,5 +1,9 @@
 package model;
 
+// "Funcionario é a classe base abstrata — tem id, nome, cpf
+// e o método abstrato getCargo(). Dela saem duas extensões:
+// Medico e Recepcionista, ambas com extends Funcionario."
+
 public abstract class Funcionario {
 
     private int id;

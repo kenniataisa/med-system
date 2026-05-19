@@ -8,6 +8,9 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.concurrent.atomic.AtomicInteger;
 
+// O Proxy é o intermediário entre o cliente e o servidor. Ele tem dois papéis:
+// conectar() — busca o objeto remoto no rmiregistry e guarda o stub. O stub é só uma referência — o cliente nunca tem o objeto servidor de verdade, só um representante dele.
+// doOperation() — é quem de fato faz a chamada remota. Monta a mensagem REQUEST, manda pro servidor via stub, espera o REPLY e retorna o resultado.
 public class Proxy {
 
     private static final AtomicInteger REQUEST_SEQUENCE = new AtomicInteger(1);

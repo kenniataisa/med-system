@@ -11,13 +11,13 @@ public class RemoteObjectRef implements Serializable {
 
     public RemoteObjectRef(String serviceName, String host, int port) {
         this.serviceName = serviceName;
-        this.host        = host;
-        this.port        = port;
+        this.host = host;
+        this.port = port;
     }
 
     public String getServiceName() { return serviceName; }
     public String getHost()        { return host; }
-    public int    getPort()        { return port; }
+    public int getPort()        { return port; }
 
     
     public String toLookupUrl() {

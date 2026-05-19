@@ -2,18 +2,20 @@ package common;
 
 import java.io.Serializable;
 
+// "Toda comunicação entre cliente e servidor passa por essa classe.
+// Cinco campos:"
+
 public class Message implements Serializable {
     private static final long serialVersionUID = 1L;
 
     public static final int REQUEST = 0;
     public static final int REPLY = 1;
 
-    private int messageType;          
-    private int requestId;            
-    private String objectReference;   
-    private String methodId;          
-    private byte[] arguments;         
-
+    private int messageType;  //se é uma requisição ou uma resposta       
+    private int requestId;  // número sequencial pra identificar a chamada
+    private String objectReference;  // qual serviço no servidor vai receber
+    private String methodId; // qual operação executar; "cadastrarMedico", "buscarMedico"
+    private byte[] arguments;  //o objeto serializado em XML, pronto pra trafegar
     
     public Message(int requestId, String objectReference, String methodId, byte[] arguments) {
         this(REQUEST, requestId, objectReference, methodId, arguments);

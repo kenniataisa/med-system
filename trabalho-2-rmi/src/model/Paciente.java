@@ -5,12 +5,12 @@ public class Paciente {
     private int    id;
     private String nome;
     private String cpf;
-    private int    idade;
+    private int idade;
 
     public Paciente() {}
 
     public Paciente(int id, String nome, String cpf, int idade) {
-        this.id    = id;
+        this.id = id;
         this.nome  = nome;
         this.cpf   = cpf;
         this.idade = idade;

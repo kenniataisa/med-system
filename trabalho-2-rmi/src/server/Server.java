@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class Server {
 
-    private static final int    PORTA_RMI    = 1099;
+    private static final int PORTA_RMI    = 1099;
     private static final String NOME_SERVICO = "ServicoMedico";
 
     public static void main(String[] args) {

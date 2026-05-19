@@ -4,13 +4,24 @@ import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.Serializable;
 import java.nio.charset.StandardCharsets;
+
+// O Marshaller converte objetos em bytes e faz o caminho inverso.
+// Dois métodos:  // objeto → byte[] e byte[] → objeto
 
 public class Marshaller {
 
     private Marshaller() {}
 
-    
+//  Usa XMLEncoder e XMLDecoder, que já vêm no Java, zero dependência externa.
+// Aqui acontecem duas serializações: o Marshaller converte os objetos de negócio
+// em XML e coloca no campo arguments. O RMI então serializa a Message inteira
+// pra transportar pela rede — isso funciona porque Message implements Serializable.
+// Marshaller é a camada do protocolo, RMI é o transporte
+
+// marshal → recebe um objeto, abre um XMLEncoder, escreve o objeto em XML, retorna os bytes
+// unmarshal → recebe os bytes e a classe esperada, abre um XMLDecoder, lê e reconstrói o objeto
 
     public static byte[] marshal(Object obj) {
         try {

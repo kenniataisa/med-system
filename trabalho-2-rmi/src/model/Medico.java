@@ -1,14 +1,16 @@
 package model;
 
+// "Além dos campos herdados, Medico tem crm e especialidade.
+// Primeira agregação: Medico tem uma Especialidade."
 public class Medico extends Funcionario {
-    private String       crm;
+    private String crm;
     private Especialidade especialidade;  
 
     public Medico() {}
 
     public Medico(int id, String nome, String cpf, String crm, Especialidade especialidade) {
         super(id, nome, cpf);
-        this.crm          = crm;
+        this.crm = crm;
         this.especialidade = especialidade;
     }
 

@@ -1,5 +1,9 @@
 package model;
 
+// Consulta tem medico, paciente, data e status.
+// Temos mais duas agregações: Consulta tem um Medico e tem um Paciente.
+// O status já começa como AGENDADA no construtor."
+
 public class Consulta {
 
     private int     id;
